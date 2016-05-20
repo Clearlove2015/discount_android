@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Indigo_nav_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_bg"
+            android:gravity="center_vertical"
+            android:padding="@dimen/x2" >
+
+            <com.schytd.discount.ui.View.ButtonIcon
+                android:id="@+id/my_wallet_back"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5"
+                android:background="@color/white"
+                android:clickable="true"
+                android:contentDescription="@string/action_settings"
+                android:gravity="center"
+                android:onClick="onClick"
+                app:iconDrawable="@drawable/titlebar_btn_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/person_center_my_wallet_str"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#39A79E" />
+
+    <com.schytd.discount.ui.View.LayoutRipple
+        android:id="@+id/setting_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:before_color="@color/white" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x40"
+            android:src="@drawable/wallet_count" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="账户余额"
+            android:textColor="@color/font_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="1"
+            android:text="0元"
+            android:textColor="#F16E02"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x20"
+            android:src="@drawable/right_icon_1" />
+    </com.schytd.discount.ui.View.LayoutRipple>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#C1CAC8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10"
+            app:before_color="@color/white" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:src="@drawable/wallet__chong_zhi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="充值"
+                android:textColor="@color/font_color" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/x5"
+            android:layout_marginTop="@dimen/x5"
+            android:background="#C1CAC8" />
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10"
+            app:before_color="@color/white" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:src="@drawable/wallet__ti_xian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="提现"
+                android:textColor="@color/font_color" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#C1CAC8" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/y10"
+        android:background="#C1CAC8" />
+
+    <com.schytd.discount.ui.View.LayoutRipple
+        android:id="@+id/go_to_card_act"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y40"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onClick"
+        android:orientation="horizontal"
+        app:before_color="@color/white" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:src="@drawable/wallet_discount" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="我的优惠券"
+            android:textColor="@color/font_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x10"
+            android:text="0张"
+            android:textColor="#F16E02"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x20"
+            android:src="@drawable/right_icon_1" />
+    </com.schytd.discount.ui.View.LayoutRipple>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#C1CAC8" />
+
+    <com.schytd.discount.ui.View.LayoutRipple
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y40"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:before_color="@color/white" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:src="@drawable/wallet_list" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_weight="1"
+            android:text="我的账单"
+            android:textColor="@color/font_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x20"
+            android:src="@drawable/right_icon_1" />
+    </com.schytd.discount.ui.View.LayoutRipple>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#C1CAC8" />
+
+</LinearLayout>

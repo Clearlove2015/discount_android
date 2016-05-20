@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imgcontrol="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Indigo_nav_color"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbar_bg"
+                android:gravity="center_vertical"
+                android:padding="@dimen/x2" >
+
+                <com.schytd.discount.ui.View.ButtonIcon
+                    android:id="@+id/person_center_back"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/x40"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    app:iconDrawable="@drawable/titlebar_btn_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/person_center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x17" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#39A79E" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/x10"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y130"
+                        android:background="@color/login_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/x4" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/camera" />
+
+                            <com.schytd.discount.ui.View.RoundImageView
+                                android:id="@+id/person_center_img"
+                                android:layout_width="@dimen/x70"
+                                android:layout_height="@dimen/x70"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:clickable="true"
+                                android:onClick="onClick"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/no_data_icon"
+                                imgcontrol:border_inside_color="#fff7f2e9"
+                                imgcontrol:border_outside_color="@color/Indigo_nav_color"
+                                imgcontrol:border_thickness="5dp" />
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/news" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/user_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/woman" />
+
+                            <TextView
+                                android:id="@+id/user_nickname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/x5"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/point_icon" />
+
+                            <TextView
+                                android:id="@+id/position_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/x5"
+                                android:gravity="center"
+                                android:text="@string/person_center_no_location_str"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal" >
+
+                        <com.schytd.discount.ui.View.LayoutRipple
+                            android:id="@+id/go_person_info"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:orientation="vertical"
+                            app:before_color="#E87876" >
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="@dimen/x30"
+                                android:layout_height="@dimen/x30"
+                                android:layout_margin="@dimen/x2"
+                                android:src="@drawable/person_info" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/x2"
+                                android:text="@string/person_center_info_str"
+                                android:textColor="@color/white" />
+                        </com.schytd.discount.ui.View.LayoutRipple>
+
+                        <com.schytd.discount.ui.View.LayoutRipple
+                            android:id="@+id/goto_personrank"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:orientation="vertical"
+                            app:before_color="#DEA97F" >
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="@dimen/x30"
+                                android:layout_height="@dimen/x30"
+                                android:layout_margin="@dimen/x2"
+                                android:src="@drawable/level" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/x2"
+                                android:text="@string/person_center_level_str"
+                                android:textColor="@color/white" />
+                        </com.schytd.discount.ui.View.LayoutRipple>
+
+                        <com.schytd.discount.ui.View.LayoutRipple
+                            android:id="@+id/go_to_qrcode"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:orientation="vertical"
+                            app:before_color="#7A5832" >
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="@dimen/x30"
+                                android:layout_height="@dimen/x30"
+                                android:layout_margin="@dimen/x2"
+                                android:src="@drawable/qrcode" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/x2"
+                                android:text="@string/person_center_qrcode_str"
+                                android:textColor="@color/white" />
+                        </com.schytd.discount.ui.View.LayoutRipple>
+                    </LinearLayout>
+                    <com.schytd.discount.ui.View.LayoutRipple
+                        android:id="@+id/goto_my_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x2"
+                        app:before_color="@color/white" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:layout_marginRight="@dimen/x10" >
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                 android:src="@drawable/wallet" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/x5"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                 android:text="@string/person_center_my_wallet_str"
+                                android:textColor="@color/font_color"
+                                android:textSize="@dimen/x14" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y5"
+                                android:text="@string/person_center_wallet_manage_str"
+                                android:textColor="@color/font_color_small"
+                                android:textSize="@dimen/x13" />
+                        </LinearLayout>
+                    </com.schytd.discount.ui.View.LayoutRipple>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_marginRight="@dimen/x10"
+                        android:background="#DFDFDF" />
+
+                    <com.schytd.discount.ui.View.LayoutRipple
+                        android:id="@+id/goto_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x2"
+                        app:before_color="@color/white" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:layout_marginRight="@dimen/x10" >
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/history" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/x5"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/person_center_history_custom_str"
+                                android:textColor="@color/font_color"
+                                android:textSize="@dimen/x14" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y5"
+                                android:text="@string/person_center_history_custom_title_str"
+                                android:textColor="@color/font_color_small"
+                                android:textSize="@dimen/x13" />
+                        </LinearLayout>
+                    </com.schytd.discount.ui.View.LayoutRipple>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_marginRight="@dimen/x10"
+                        android:background="#DFDFDF" />
+
+                    <com.schytd.discount.ui.View.LayoutRipple
+                        android:id="@+id/goto_push"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x2"
+                        app:before_color="@color/white" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:layout_marginRight="@dimen/x10" >
+
+                            <ImageView
+                                android:contentDescription="@string/app_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/push" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/x5"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/person_center_user_push_str"
+                                android:textColor="@color/font_color"
+                                android:textSize="@dimen/x14" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y5"
+                                android:text="@string/person_center_user_push_title_str"
+                                android:textColor="@color/font_color_small"
+                                android:textSize="@dimen/x13" />
+                        </LinearLayout>
+                    </com.schytd.discount.ui.View.LayoutRipple>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_marginRight="@dimen/x10"
+                        android:background="#DFDFDF" />
+
+                    <com.schytd.discount.ui.View.LayoutRipple
+                        android:id="@+id/unregister_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y32"
+                        android:layout_margin="@dimen/y10"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x10"
+                        app:before_color="#0126b4a7" >
+
+                        <ImageView
+                            android:contentDescription="@string/app_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/x10"
+                            android:src="@drawable/unregister_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/person_center_register_str"
+                            android:textColor="@color/Indigo_nav_color"
+                            android:textSize="@dimen/x15" />
+                    </com.schytd.discount.ui.View.LayoutRipple>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/loading_person_center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/progressbar_shape"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="连接中"
+                    android:textColor="#555555" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

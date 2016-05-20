@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Indigo_nav_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x2"
+            android:background="@drawable/toolbar_bg"
+            android:gravity="center_vertical" >
+
+            <com.schytd.discount.ui.View.ButtonIcon
+                android:id="@+id/list_btn_back"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5"
+                android:background="@color/white"
+                android:clickable="true"
+                android:contentDescription="@string/action_settings"
+                android:gravity="center"
+                android:onClick="onClick"
+                app:iconDrawable="@drawable/titlebar_btn_back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="商家列表"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x17" />
+            <com.schytd.discount.ui.View.ButtonIcon
+                android:id="@+id/list_goto_search"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_marginRight="@dimen/x45"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center"
+                android:contentDescription="@string/action_settings"
+                app:iconDrawable="@drawable/search_icon"
+                />
+            <com.schytd.discount.ui.View.ButtonIcon
+                android:id="@+id/list_goto_map"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_marginRight="@dimen/x5"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center"
+                android:contentDescription="@string/action_settings"
+                android:onClick="onClick"
+                app:iconDrawable="@drawable/map_icon"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#39A79E" />
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/lin_shaixuan_discount"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="#7DD0C3"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip" >
+
+            <TextView
+                android:id="@+id/tv_categry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="分类"
+                android:textColor="@color/white_gray" />
+
+            <ImageView
+                android:id="@+id/icon_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_close" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lin_shaixuan_distance"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="#7DD0C3"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip" >
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="范围"
+                android:textColor="@color/white_gray" />
+
+            <ImageView
+                android:id="@+id/icon_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_close" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_shaixuan_"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="#7DD0C3"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip" >
+            <TextView
+                android:id="@+id/tv_shaixuan_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="排序"
+                android:textColor="@color/white_gray" />
+            <ImageView
+                android:id="@+id/icon_shaixuan_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_close" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc" />
+
+    <FrameLayout
+        android:id="@+id/detail_show_model"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</LinearLayout>

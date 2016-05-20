@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Indigo_nav_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_bg"
+            android:gravity="center_vertical"
+            android:padding="@dimen/x2" >
+
+            <com.schytd.discount.ui.View.ButtonIcon
+                android:id="@+id/search_back"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5"
+                android:background="@color/white"
+                android:clickable="true"
+                android:contentDescription="@string/action_settings"
+                android:gravity="center"
+                android:onClick="onClick"
+                app:iconDrawable="@drawable/titlebar_btn_back" />
+
+            <TextView
+                android:id="@+id/login_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x17" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#39A79E" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9F9F9"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y40" >
+
+            <com.schytd.discount.ui.View.EditTextWithDel
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/x5"
+                android:layout_weight="1"
+                android:background="@drawable/search_shape"
+                android:imeOptions="actionSearch"
+                android:padding="@dimen/x5"
+                android:singleLine="true"
+                android:textColor="#666666" />
+
+            <com.schytd.discount.ui.View.ButtonFlat
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/x5"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/x5"
+                android:text="搜 索"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dddddd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x10"
+                android:text="热门搜索"
+                android:textColor="#666666" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/search_tv_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x10"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_tag_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingTop="@dimen/y5"
+                    android:text="谭鱼头"
+                    android:textColor="#8D8D8D" />
+
+                <TextView
+                    android:id="@+id/search_tv_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x10"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_tag_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingTop="@dimen/y5"
+                    android:text="火锅"
+                    android:textColor="#8D8D8D" />
+
+                <TextView
+                    android:id="@+id/search_tv_three"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x10"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_tag_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingTop="@dimen/y5"
+                    android:text="三国烤肉"
+                    android:textColor="#8D8D8D" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/search_tv_four"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x10"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_tag_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingTop="@dimen/y5"
+                    android:text="日本料理"
+                    android:textColor="#8D8D8D" />
+
+                <TextView
+                    android:id="@+id/search_tv_five"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x10"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_tag_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingTop="@dimen/y5"
+                    android:text="鱼"
+                    android:textColor="#8D8D8D" />
+
+                <TextView
+                    android:id="@+id/search_tv_six"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/x10"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_tag_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/y5"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10"
+                    android:paddingTop="@dimen/y5"
+                    android:text="烧烤"
+                    android:textColor="#8D8D8D" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dddddd" />
+
+        <ListView
+            android:id="@+id/search_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:id="@+id/clear_search_his"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical"
+            app:before_color="#ffffff" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dddddd" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/x10"
+                android:text="清除搜索历史"
+                android:textColor="#dddddd"
+                android:textSize="@dimen/x12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dddddd" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+    </LinearLayout>
+
+</LinearLayout>

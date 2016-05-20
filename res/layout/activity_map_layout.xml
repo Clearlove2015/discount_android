@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_map_viewpage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x160"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/x10"
+                android:clickable="true"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/x20"
+                android:src="@drawable/up" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/activity_map_location"
+                android:layout_width="@dimen/x35"
+                android:layout_height="@dimen/x35"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:src="@drawable/location" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/y15"
+            android:src="@drawable/new_point" />
+
+        <ImageView
+            android:id="@+id/activity_map_back"
+            android:layout_width="@dimen/x35"
+            android:layout_height="@dimen/x35"
+            android:layout_margin="20dp"
+            android:clickable="true"
+            android:contentDescription="@string/action_settings"
+            android:src="@drawable/map_back" />
+
+        <LinearLayout
+            android:id="@+id/map_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/map_no_net"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:gravity="center"
+            android:background="#e5e5e5"
+            android:orientation="vertical"
+            android:visibility="gone" >
+            <ImageView
+                android:id="@+id/map_to_connect"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/no_data_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="我只能帮您到这儿了~" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

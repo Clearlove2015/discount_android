@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imgcontrol="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sliding_menu_color"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sliding_menu_bg"
+        android:paddingTop="@dimen/y20" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/y20"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/x10"
+                android:layout_weight="6"
+                android:gravity="center_vertical" >
+
+                <com.schytd.discount.ui.View.ButtonIcon
+                    android:id="@+id/goto_setting"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:background="@color/Indigo_nav_color"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    app:iconDrawable="@drawable/setting"
+                    app:iconSize="@dimen/x20" />
+
+                <com.schytd.discount.ui.View.RoundImageView
+                    android:id="@+id/menu_img"
+                    android:layout_width="@dimen/x70"
+                    android:layout_height="@dimen/x70"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/no_data_icon"
+                    imgcontrol:border_inside_color="#fff7f2e9"
+                    imgcontrol:border_outside_color="@color/Indigo_nav_color"
+                    imgcontrol:border_thickness="5dp" />
+
+                <com.schytd.discount.ui.View.ButtonIcon
+                    android:id="@+id/goto_message_center"
+                    android:layout_width="@dimen/x30"
+                    android:layout_height="@dimen/x30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x20"
+                    android:background="@color/Indigo_nav_color"
+                    android:clickable="true"
+                    android:contentDescription="@string/action_settings"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    app:iconDrawable="@drawable/message" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y50"
+                android:text="未登录"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="#2D2F3B" />
+
+            <com.schytd.discount.ui.View.LayoutRipple
+                android:id="@+id/near_seller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="@dimen/y7"
+                app:before_color="#0126b4a7" >
+                <ImageView
+                    android:contentDescription="@string/app_name"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:src="@drawable/near" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu_near_str"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x13" />
+
+                <ImageView
+                    android:contentDescription="@string/app_name"
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/y12"
+                    android:layout_marginRight="@dimen/x20"
+                    android:src="@drawable/sliding_menu_" />
+            </com.schytd.discount.ui.View.LayoutRipple>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="#2D2F3B" />
+
+            <com.schytd.discount.ui.View.LayoutRipple
+                android:id="@+id/goto_personCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="@dimen/y7"
+                app:before_color="#0126b4a7" >
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:contentDescription="@string/action_settings"
+                    android:src="@drawable/person" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu_person_center_str"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x13" />
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/y12"
+                    android:layout_marginRight="@dimen/x20"
+                    android:contentDescription="@string/action_settings"
+                    android:src="@drawable/sliding_menu_" />
+            </com.schytd.discount.ui.View.LayoutRipple>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="#2D2F3B" />
+
+            <com.schytd.discount.ui.View.LayoutRipple
+                android:id="@+id/goto_discount_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="@dimen/y7"
+                app:before_color="#0126b4a7" >
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:contentDescription="@string/action_settings"
+                    android:src="@drawable/sell" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu_discount_str"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x13" />
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/y12"
+                    android:layout_marginRight="@dimen/x20"
+                    android:contentDescription="@string/action_settings"
+                    android:src="@drawable/sliding_menu_" />
+            </com.schytd.discount.ui.View.LayoutRipple>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="#2D2F3B" />
+            <com.schytd.discount.ui.View.LayoutRipple
+                android:id="@+id/goto_read_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="@dimen/y7"
+                app:before_color="#0126b4a7" >
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:contentDescription="@string/action_settings"
+                    android:src="@drawable/menu_history_read" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/x10"
+                    android:gravity="center_vertical"
+                    android:text="浏览历史"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x13" />
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/y12"
+                    android:layout_marginRight="@dimen/x20"
+                    android:contentDescription="@string/action_settings"
+                    android:src="@drawable/sliding_menu_" />
+            </com.schytd.discount.ui.View.LayoutRipple>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:background="#2D2F3B" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

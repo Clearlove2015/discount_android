@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Indigo_nav_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_bg"
+            android:padding="@dimen/x2"
+            android:gravity="center_vertical" >
+
+            <com.schytd.discount.ui.View.ButtonIcon
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x5"
+                android:background="@color/white"
+                android:clickable="true"
+                android:contentDescription="@string/action_settings"
+                android:gravity="center"
+                android:onClick="onClick"
+                app:iconDrawable="@drawable/titlebar_btn_back" />
+
+            <TextView
+                android:id="@+id/login_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/user_info_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x17" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#39A79E" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C1CAC8" />
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:id="@+id/user_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            app:before_color="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1"
+                android:text="@string/personal_message_txt2"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x14" />
+
+            <com.schytd.discount.ui.View.RoundImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/no_data_icon"
+                app:border_inside_color="#666666" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@drawable/right_icon_1" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:background="#C1CAC8" />
+        </LinearLayout>
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:id="@+id/personal_msg_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y40"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            app:before_color="@color/white"
+            android:onClick="onClick"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1"
+                android:text="@string/user_info_nickname"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:id="@+id/personal_msg_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x10"
+                android:text="未登录"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@drawable/right_icon_1" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:background="#C1CAC8" />
+        </LinearLayout>
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:id="@+id/personal_msg_btn2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y40"
+            android:clickable="true"
+            app:before_color="@color/white"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1"
+                android:text="@string/personal_message_txt4"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@drawable/right_icon_1" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:background="#C1CAC8" />
+        </LinearLayout>
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:id="@+id/personal_msg_btn3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y40"
+            android:clickable="true"
+            app:before_color="@color/white"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1"
+                android:text="@string/personal_message_txt5"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:id="@+id/personal_msg_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x10"
+                android:textSize="@dimen/x14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@drawable/right_icon_1" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:background="#C1CAC8" />
+        </LinearLayout>
+
+        <com.schytd.discount.ui.View.LayoutRipple
+            android:id="@+id/personal_msg_btn5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y40"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            app:before_color="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1"
+                android:text="修改密码"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@drawable/right_icon_1" />
+        </com.schytd.discount.ui.View.LayoutRipple>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C1CAC8" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/y10"
+            android:background="#C1CAC8" />
+
+        <LinearLayout
+            android:id="@+id/personal_msg_btn4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y40"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_weight="1"
+                android:text="@string/personal_message_txt7"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:id="@+id/personal_msg_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x10"
+                android:text="@string/personal_message_txt8"
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/x14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C1CAC8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

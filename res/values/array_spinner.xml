@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_classfiy">
+        <item>全部分类</item>
+        <item>餐饮</item>
+        <item>娱乐</item>
+        <item>休闲</item>
+        <item>住行</item>
+    </string-array>
+    <string-array name="array_subclassfiy_1">
+        <item>餐饮-全部</item>
+        <item>中餐</item>
+        <item>烧烤</item>
+        <item>火锅</item>
+        <item>海鲜</item>
+        <item>西餐</item>
+        <item>大排档</item>
+        <item>料理</item>
+        <item>干锅</item>
+        <item>特色餐饮</item>
+        <item>餐饮-其他</item>
+    </string-array>
+    <string-array name="array_subclassfiy_2">
+        <item>娱乐-全部</item>
+        <item>KTV</item>
+        <item>会所</item>
+        <item>酒吧</item>
+        <item>娱乐-其他</item>
+    </string-array>
+    <string-array name="array_subclassfiy_3">
+        <item>休闲-全部</item>
+        <item>茶楼</item>
+        <item>餐吧</item>
+        <item>水吧</item>
+        <item>休闲-其他</item>
+    </string-array>
+    <string-array name="array_subclassfiy_4">
+        <item>住行-全部</item>
+        <item>酒店</item>
+        <item>公寓</item>
+        <item>生活服务</item>
+        <item>住行-其他</item>
+    </string-array>
+    <string-array name="array_distance">
+        <item>1000米</item>
+        <item>2000米</item>
+        <item>5000米</item>
+        <item>全市</item>
+    </string-array>
+    <string-array name="array_shaixuan">
+       <item>折扣排序</item>
+        <item>距离排序</item>
+    </string-array>
+    <string-array name="spinner4name">
+        <item>所有</item>
+        <item>已读</item>
+        <item>未读</item>
+    </string-array>
+
+</resources>

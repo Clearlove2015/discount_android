@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="y35">50dp</dimen>
+<dimen name="y40">40dp</dimen>
+<dimen name="y20">20dp</dimen>
+<dimen name="y30">30dp</dimen>
+<dimen name="y10">10dp</dimen>
+<dimen name="y120">120dp</dimen>
+<dimen name="y150">160dp</dimen>
+<dimen name="y3">3dp</dimen>
+<dimen name="y250">250dp</dimen>
+<dimen name="y130">140dp</dimen>
+<dimen name="y50">50dp</dimen>
+<dimen name="y5">5dp</dimen>
+<dimen name="y15">15dp</dimen>
+<dimen name="y80">80dp</dimen>
+<dimen name="y4">4dp</dimen>
+<dimen name="y25">25dp</dimen>
+<dimen name="y60">60dp</dimen>
+<dimen name="y12">12dp</dimen>
+<dimen name="y41">50dp</dimen>
+</resources>

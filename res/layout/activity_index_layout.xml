@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/first_icon"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center"
+        android:src="@drawable/index_icon" />
+
+    <ImageView
+        android:id="@+id/first_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/x20"
+        android:scaleType="center"
+        android:src="@drawable/index_cctv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/index_name"
+        android:layout_centerHorizontal="true"
+        android:text="四川华宇天地网络科技有限公司"
+        android:textColor="@color/font_color" />
+
+    <TextView
+        android:id="@+id/index_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x5"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/x20"
+        android:text="Copyright©2015 版权所有"
+        android:textColor="@color/font_color" />
+</RelativeLayout>

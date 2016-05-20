@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00fff000"
+    android:id="@+id/img_top"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/x10"
+    android:paddingLeft="@dimen/x10"
+    android:paddingRight="@dimen/x10" >
+	<View 
+	    android:id="@+id/img_bg"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    />
+    <LinearLayout
+        android:layout_marginTop="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/viewpager_shape"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10"
+            android:textSize="@dimen/x15"
+            android:gravity="center"
+            android:textColor="@color/Indigo_nav_color"
+            android:text="拍摄照片" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C1CAC8" />
+
+        <TextView
+            android:id="@+id/get_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10"
+            android:textSize="@dimen/x15"
+            android:textColor="@color/Indigo_nav_color"
+            android:gravity="center"
+            android:text="从相册中选取" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/viewpager_shape"
+        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginTop="@dimen/x10"
+        android:padding="@dimen/x10"
+        android:textColor="@color/Indigo_nav_color"
+        android:gravity="center"
+        android:textSize="@dimen/x15"
+        android:text="取消" />
+
+</LinearLayout>

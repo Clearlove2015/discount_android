@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.schytd.discount.ui.View.LayoutRipple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/catering"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:minHeight="40dp"
+    android:orientation="horizontal"
+    app:before_color="#ffffff" >
+
+    <ImageView
+        android:id="@+id/iv_search_icon"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/x10"
+        android:padding="@dimen/x5"
+        android:src="@drawable/ic_search_history" />
+
+    <TextView
+        android:id="@+id/tv_search_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/x2"
+        android:text="搜索历史"
+        android:textColor="#8D8D8D" />
+
+</com.schytd.discount.ui.View.LayoutRipple>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="y35">62.5dp</dimen>
+<dimen name="y40">50dp</dimen>
+<dimen name="y45">45dp</dimen>
+<dimen name="y20">25dp</dimen>
+<dimen name="y30">37.5dp</dimen>
+<dimen name="y10">12.5dp</dimen>
+<dimen name="y120">150dp</dimen>
+<dimen name="y150">200dp</dimen>
+<dimen name="y3">3.75dp</dimen>
+<dimen name="y250">312.5dp</dimen>
+<dimen name="y130">175dp</dimen>
+<dimen name="y50">62.5dp</dimen>
+<dimen name="y5">6.25dp</dimen>
+<dimen name="y15">18.75dp</dimen>
+<dimen name="y80">100dp</dimen>
+<dimen name="y4">5dp</dimen>
+<dimen name="y25">31.25dp</dimen>
+<dimen name="y60">75dp</dimen>
+<dimen name="y12">15dp</dimen>
+<dimen name="y41">50dp</dimen>
+<dimen name="y7">12dp</dimen>
+<dimen name="y_bottom">50dp</dimen>
+<dimen name="y180">180dp</dimen>
+<dimen name="y200">260dp</dimen>
+</resources>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.schytd.discount_android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 相机 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 读写内存卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 配置推送服务权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="getui.permission.GetuiService.com.schytd.discount.ui" />
+    <!-- 自定义权限 -->
+    <permission
+        android:name="getui.permission.GetuiService.com.schytd.discount.ui"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="com.schytd.discount.ui.ThisApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name="com.schytd.discount.ui.pushservice.MyPushService"
+            android:process=":pushservice" >
+        </service>
+
+        <!--
+             <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="0P0T5ECcppEjZSl6gI3u0L5G" />
+            hD2AukFj7jBpeYC8f02qEaUh
+        -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="MWPGpOcgwBsG7m3d0PCysmmH" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- 配置推送服务 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="i56dpx3SeR9uo3ZsY80Kc1" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="BB7QcfIJ2r6vWc2lpfBhz8" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="OcrUDaHeQn9PE5voQ1YLh8" />
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- android:name="com.igexin.sdk.action.第三方的appId" -->
+                <action android:name="com.igexin.sdk.action.etVyv7RHJ28BqN3KKCtKJ6" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 推送服务结束 -->
+        <activity
+            android:name="com.schytd.discount.ui.indexActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityUpdataNickName"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityAboutUs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityFeedBack"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityContactUs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityPush"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityMessageCenter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityMessageDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityHistoryCustoms"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityPersonRank"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityUpdataPhoneNum"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityPersonalMessage"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityRegister"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityQrCode"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityLogin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityForgetPassword"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityUpdatePassword"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityMyQrCode"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityMap"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityRoutePlan"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivitySearch"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivitySellerDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityGender"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityPersonCenter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivitySetting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.FirstActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityDiscountInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityNoNet"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityCityChoice"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityIntegralMall"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityWallet"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityPay"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityCardList"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.schytd.discount.ui.ActivityCommodityDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 分享 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5603539fe0f55aa3aa00216b" >
+        </meta-data>
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 易信回调activity -->
+        <activity
+            android:name=".yxapi.YXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 人人SSO授权所需的OAuthActivity -->
+        <activity
+            android:name="com.renn.rennsdk.oauth.OAuthActivity"
+            android:configChanges="orientation|navigation|keyboardHidden" />
+        <!-- Socialize Example Activity -->
+
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".activity.SocialHomeActivity"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.SwitchActivity"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/app_name"
+            android:launchMode="standard" >
+        </activity>
+        <activity
+            android:name=".activity.CustomPlatformActivity"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/umeng_example_home_btn_plus" >
+        </activity>
+        <activity
+            android:name=".activity.ActionBarExampleDetail"
+            android:configChanges="orientation|keyboard"
+            android:label="@string/umeng_example_home_btn_plus" >
+        </activity>
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" >
+        </meta-data>
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="false" />
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.schytd.discount.ui.ActivityReadHistory"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
